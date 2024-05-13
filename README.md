@@ -16,6 +16,12 @@
 
 ---
 
+```sh
+pip install -r requirements.txt --extra-index-url https://pypi.nvidia.com/
+cd src
+AWS_REGION_NAME=a uvicorn --host=0.0.0.0 --port=8000 wordcab_transcribe.main:app
+```
+
 FastAPI based API for transcribing audio files using [`faster-whisper`](https://github.com/guillaumekln/faster-whisper)
 and [Auto-Tuning-Spectral-Clustering](https://arxiv.org/pdf/2003.02405.pdf) for diarization
 (based on this [GitHub implementation](https://github.com/tango4j/Auto-Tuning-Spectral-Clustering)).
